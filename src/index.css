@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+}
+
+.nav {
+    
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 30px;
+    
+}
+a {
+    text-decoration: none;
+}
+
+
+.home {
+    background:red;
+    width: 100%;
+    height: 100vh;
+}
+.contact {
+    background:blue;
+    width: 100%;
+    height: 100vh;
+}
+.about {
+    background:purple;
+    width: 100%;
+    height: 100vh;
+}
