@@ -3,9 +3,12 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
+import Post from "./Post";
+import Archives from "./Archives";
+import Features from "./Features";
+import Page from "./Page";
 import './index.css';
+import Layouts from "./Layouts";
 
 export default function App() {
   return (
@@ -13,11 +16,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<Home />} />
-          <Route path="/Layout" element={<Layout />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/layouts" element={<Layouts />} />
+          <Route path="/post" element={<Post />} />
+          <Route path="/page" element={<Page />} />
+          <Route path="/archives" element={<Archives />} />
+          <Route path="/features" element={<Features />} />
         </Route>
       </Routes>
     </BrowserRouter>

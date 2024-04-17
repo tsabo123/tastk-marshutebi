@@ -1,51 +1,42 @@
-import { Outlet, Link } from "react-router-dom";
+import { useState } from 'react';
+import { Outlet, Link } from 'react-router-dom';
+import OffCanvasExample from './OffCanvasExample'; // Assuming the OffCanvasExample component is in the same directory
 
 const Layout = () => {
   return (
-    <>
     <div className="container">
-    <nav >
-        <ul className=" navbar "  >
-          <li>
+      <nav>
+        <ul className="navbar" style={{ listStyleType: 'none', padding: 0 }}>
+          <span style={{ marginRight: '10px' }}>
             <Link to="Logo">Typology</Link>
-          </li>
-          <li>
+          </span>
+          <span style={{ marginRight: '10px' }}>
             <Link to="/">Home</Link>
-          </li>
-          <li>
+          </span>
+          <span style={{ marginRight: '10px' }}>
             <Link to="/Layouts">Layouts</Link>
-          </li>
-          <li>
+          </span>
+          <span style={{ marginRight: '10px' }}>
             <Link to="/Post">Post</Link>
-          </li>
-          <li>
+          </span>
+          <span style={{ marginRight: '10px' }}>
             <Link to="/Page">Page</Link>
-          </li>
-          <li>
+          </span>
+          <span style={{ marginRight: '10px' }}>
             <Link to="/Archives">Archives</Link>
-          </li>
-          <li>
+          </span>
+          <span style={{ marginRight: '10px' }}>
             <Link to="/Featured">Featured</Link>
-          </li>
-          <li>
-            <Link to="/OffCanvasExample"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-</svg></Link>
-
-          </li>
-          
+          </span>
+          <span>
+            <OffCanvasExample name="OffCanvas" />
+          </span>
         </ul>
       </nav>
 
       <Outlet />
-
     </div>
-      
-    </>
-  )
+  );
 };
 
-
 export default Layout;
-
-
